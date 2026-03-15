@@ -1,0 +1,268 @@
+/*
+ * Neighborhood Design System — Token Stylesheet
+ * Import this in your app to use Neighborhood tokens and component styles.
+ *
+ * Fonts required (load separately):
+ *   --font-display: Space Grotesk (700, 600, 500)
+ *   --font-body: DM Sans (400, 500)
+ *
+ * Usage:
+ *   import '@neighborhood/ui/tokens.css'
+ */
+
+:root {
+  /* ── TYPOGRAPHY (sizes only — font families on body) ── */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-display: 4rem;
+
+  /* ── COLORS — Neutral (Warm Stone) ── */
+  --neutral-50: #faf8f6;
+  --neutral-100: #f3f0ed;
+  --neutral-200: #e6e2dd;
+  --neutral-300: #d1cbc4;
+  --neutral-400: #a69f96;
+  --neutral-500: #7a736b;
+  --neutral-600: #5c554e;
+  --neutral-700: #45403b;
+  --neutral-800: #2e2a26;
+  --neutral-900: #1a1816;
+  --neutral-950: #0d0c0a;
+
+  /* ── COLORS — Primary (Grass Green) ── */
+  --primary-50: #edfcf2;
+  --primary-100: #d3f8e0;
+  --primary-200: #a9f0c4;
+  --primary-300: #6de29e;
+  --primary-400: #34cc76;
+  --primary-500: #16a85a;
+  --primary-600: #0b8847;
+  --primary-700: #096d3a;
+  --primary-800: #0a5630;
+  --primary-900: #093e24;
+
+  /* ── COLORS — Semantic ── */
+  --success: #10b981;
+  --warning: #e8780a;
+  --error: #dc2626;
+  --error-dark: #b91c1c;
+  --info: #3478d4;
+
+  /* ── COLORS — Extended: Berry ── */
+  --berry-50: #fff1f2;
+  --berry-100: #ffe4e6;
+  --berry-200: #ffbfc4;
+  --berry-300: #ff8f98;
+  --berry-400: #ff5c6a;
+  --berry-500: #e8364a;
+  --berry-600: #c41d35;
+  --berry-700: #a3172c;
+  --berry-800: #871826;
+  --berry-900: #6e1624;
+
+  /* ── COLORS — Extended: Terracotta ── */
+  --terracotta-50: #fff6ed;
+  --terracotta-100: #ffe8d0;
+  --terracotta-200: #ffcda0;
+  --terracotta-300: #ffa964;
+  --terracotta-400: #ff8530;
+  --terracotta-500: #f06810;
+  --terracotta-600: #cc5008;
+  --terracotta-700: #a63d0b;
+  --terracotta-800: #873210;
+  --terracotta-900: #6e2b10;
+
+  /* ── COLORS — Extended: Amber ── */
+  --amber-50: #fffbeb;
+  --amber-100: #fff3c4;
+  --amber-200: #ffe588;
+  --amber-300: #ffd04a;
+  --amber-400: #ffbc20;
+  --amber-500: #f5a000;
+  --amber-600: #d47d02;
+  --amber-700: #aa5c06;
+  --amber-800: #8b470c;
+  --amber-900: #72390d;
+
+  /* ── COLORS — Extended: Sky ── */
+  --sky-50: #eff8ff;
+  --sky-100: #dbeeff;
+  --sky-200: #b8ddff;
+  --sky-300: #8ac6ff;
+  --sky-400: #52a8ff;
+  --sky-500: #2a88f0;
+  --sky-600: #166cd4;
+  --sky-700: #1356ac;
+  --sky-800: #15488b;
+  --sky-900: #163d6e;
+
+  /* ── COLORS — Extended: Plum ── */
+  --plum-50: #faf4ff;
+  --plum-100: #f2e5ff;
+  --plum-200: #e6ceff;
+  --plum-300: #d3a6ff;
+  --plum-400: #ba72ff;
+  --plum-500: #a248f0;
+  --plum-600: #8a28d8;
+  --plum-700: #7320b5;
+  --plum-800: #601c94;
+  --plum-900: #4e1878;
+
+  /* ── COLORS — Extended: Sage ── */
+  --sage-50: #eefcf8;
+  --sage-100: #d5f6ed;
+  --sage-200: #aeecdb;
+  --sage-300: #79dcc4;
+  --sage-400: #42c4a8;
+  --sage-500: #26a88e;
+  --sage-600: #1a8773;
+  --sage-700: #196c5d;
+  --sage-800: #19564c;
+  --sage-900: #18473f;
+
+  /* ── SPACING (4px base) ── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* ── BORDER RADIUS ── */
+  --radius-control: 8px;
+  --radius-surface: 12px;
+  --radius-pill: 9999px;
+
+  /* ── SHADOW / ELEVATION ── */
+  --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-raised: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-overlay: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+
+  /* ── MOTION ── */
+  --ease-default: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-pop: cubic-bezier(0.22, 1.9, 0.36, 0.98);
+  --ease-loop: ease-in-out;
+  --duration-loop: 1.4s;
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --duration-slow: 350ms;
+  --stagger: 50ms;
+}
+
+/*
+ * Font families — consumers must load Space Grotesk and DM Sans
+ * and set these CSS variables on <body> or :root.
+ *
+ * If using next/font:
+ *   const spaceGrotesk = Space_Grotesk({ variable: "--font-space-grotesk", ... })
+ *   const dmSans = DM_Sans({ variable: "--font-dm-sans", ... })
+ *   <body className={`${spaceGrotesk.variable} ${dmSans.variable}`}>
+ *
+ * The variables below resolve the font stacks:
+ */
+body {
+  --font-display: var(--font-space-grotesk), sans-serif;
+  --font-body: var(--font-dm-sans), sans-serif;
+}
+
+
+/* ════════════════════════════════════════════════════════════════════════════
+   COMPONENT KEYFRAMES
+   ════════════════════════════════════════════════════════════════════════════ */
+
+@keyframes nb-tab-enter {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes nb-banner-enter {
+  from { transform: translateY(-8px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes nb-banner-exit {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-8px); opacity: 0; }
+}
+@keyframes nb-badge-enter {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@keyframes nb-avatar-enter {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@keyframes nb-input-enter {
+  from { transform: translateY(4px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes nb-menu-enter {
+  from { transform: translateY(-4px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes nb-morph-twin-a {
+  0%, 100% { border-radius: 50%; transform: scale(1.1); }
+  50% { border-radius: 20%; transform: scale(0.55); }
+}
+@keyframes nb-morph-twin-b {
+  0%, 100% { border-radius: 20%; transform: scale(0.55); }
+  50% { border-radius: 50%; transform: scale(1.1); }
+}
+
+/* Input placeholder */
+input::placeholder {
+  color: var(--neutral-300) !important;
+  font-weight: 500;
+}
+
+/* Toggle focus ring */
+.nb-toggle:focus-visible {
+  outline: 2px solid var(--sky-400);
+  outline-offset: 2px;
+}
+
+
+/* ════════════════════════════════════════════════════════════════════════════
+   COMPONENT RESPONSIVE OVERRIDES
+   ════════════════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 640px) {
+  .nb-property-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: var(--space-1) !important;
+  }
+  .nb-property-row span {
+    min-width: 0 !important;
+  }
+  .nb-setting-row {
+    flex-wrap: wrap !important;
+  }
+  .nb-content-section-desc {
+    display: none !important;
+  }
+  .nb-form-footer {
+    flex-direction: column !important;
+    width: 100%;
+  }
+  .nb-form-footer > * {
+    width: 100% !important;
+  }
+  .nb-setting-row .nb-segmented {
+    flex-direction: column !important;
+    max-width: 100% !important;
+  }
+  .nb-setting-row .nb-segmented button {
+    width: 100% !important;
+    text-align: center !important;
+  }
+}
