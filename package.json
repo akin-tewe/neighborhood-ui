@@ -4,25 +4,38 @@
   "description": "Neighborhood Design System — components and tokens for building interfaces with warmth, motion, and personality.",
   "license": "MIT",
   "type": "module",
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./src/index.ts",
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
     "./tokens.css": "./src/tokens.css"
   },
   "files": [
-    "src"
+    "dist",
+    "src/tokens.css"
   ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
   "peerDependencies": {
     "react": ">=18",
     "react-dom": ">=18",
     "@heroicons/react": "^2.0.0"
   },
   "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "@heroicons/react": "^2.2.0",
-    "typescript": "^5.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0"
   },
