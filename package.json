@@ -1,7 +1,7 @@
 {
   "name": "@neighborhood/ui",
   "version": "0.1.0",
-  "description": "Neighborhood Design System — components and tokens for building interfaces with warmth, motion, and personality.",
+  "description": "Where every component knows its neighbors. A design system with warmth, motion, and personality baked into every token.",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.js",

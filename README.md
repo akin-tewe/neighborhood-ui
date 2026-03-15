@@ -1,6 +1,8 @@
 # @neighborhood/ui
 
-Neighborhood Design System — components and tokens for building interfaces with warmth, motion, and personality.
+Where every component knows its neighbors. A design system with warmth, motion, and personality baked into every token.
+
+18 components. 6 token categories. Built with React and CSS custom properties.
 
 ## Install
 
