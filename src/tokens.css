@@ -49,11 +49,11 @@
   --primary-900: #093e24;
 
   /* ── COLORS — Semantic ── */
-  --success: #10b981;
-  --warning: #e8780a;
-  --error: #dc2626;
-  --error-dark: #b91c1c;
-  --info: #3478d4;
+  --success: #16a85a;
+  --warning: #d47d02;
+  --error: #c41d35;
+  --error-dark: #a3172c;
+  --info: #166cd4;
 
   /* ── COLORS — Extended: Berry ── */
   --berry-50: #fff1f2;
@@ -126,6 +126,31 @@
   --sage-700: #196c5d;
   --sage-800: #19564c;
   --sage-900: #18473f;
+
+  /* ── COLOR ROLES — Background ── */
+  --bg-page: #ffffff;
+  --bg-card: var(--neutral-50);
+  --bg-surface: var(--neutral-100);
+  --bg-hover: var(--neutral-200);
+  --bg-dark: var(--neutral-900);
+  --bg-overlay: var(--neutral-950);
+
+  /* ── COLOR ROLES — Border ── */
+  --border-default: var(--neutral-200);
+  --border-strong: var(--neutral-300);
+  --border-prominent: var(--neutral-400);
+
+  /* ── COLOR ROLES — Text ── */
+  --text-primary: var(--neutral-900);
+  --text-secondary: var(--neutral-700);
+  --text-muted: var(--neutral-500);
+  --text-disabled: var(--neutral-400);
+
+  /* ── COLOR ROLES — Interactive ── */
+  --interactive-primary: var(--primary-500);
+  --interactive-accent: var(--primary-400);
+  --interactive-tint: var(--primary-50);
+  --focus-ring: var(--sky-400);
 
   /* ── SPACING (4px base) ── */
   --space-1: 0.25rem;
