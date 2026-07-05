@@ -255,17 +255,15 @@
 }
 
 /*
- * Font families — consumers must load Space Grotesk and DM Sans
- * and set these CSS variables on <body> or :root.
+ * Font families — consumers must load Space Grotesk and DM Sans and set
+ * --font-space-grotesk / --font-dm-sans (e.g. via next/font on <body>).
  *
- * If using next/font:
- *   const spaceGrotesk = Space_Grotesk({ variable: "--font-space-grotesk", ... })
- *   const dmSans = DM_Sans({ variable: "--font-dm-sans", ... })
- *   <body className={`${spaceGrotesk.variable} ${dmSans.variable}`}>
- *
- * The variables below resolve the font stacks:
+ * These are defined on :root (not body) so that the composite type tokens
+ * above (--type-*-family, which reference --font-display/--font-body) can
+ * resolve them. The underlying --font-space-grotesk var still resolves at
+ * use-time from the <body> element where next/font injects it.
  */
-body {
+:root {
   --font-display: var(--font-space-grotesk), sans-serif;
   --font-body: var(--font-dm-sans), sans-serif;
 }
