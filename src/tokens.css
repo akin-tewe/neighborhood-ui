@@ -125,13 +125,6 @@
   --primary-800: #0a5630;
   --primary-900: #093e24;
 
-  /* ── COLORS — Semantic ── */
-  --success: #16a85a;
-  --warning: #d47d02;
-  --error: #c41d35;
-  --error-dark: #a3172c;
-  --info: #166cd4;
-
   /* ── COLORS — Extended: Berry ── */
   --berry-50: #fff1f2;
   --berry-100: #ffe4e6;
@@ -204,11 +197,27 @@
   --sage-800: #19564c;
   --sage-900: #18473f;
 
+  /* ── COLORS — Semantic ── */
+  /* Aliases into the palette (never raw hex) so every semantic color traces
+     to a palette step and the reference graph is total. Resolved values are
+     unchanged from the previous hardcoded hex. State grammar: a -hover suffix
+     means one step deeper on the source scale. */
+  --success: var(--primary-500);
+  --success-hover: var(--primary-600);
+  --warning: var(--amber-600);
+  --warning-hover: var(--amber-700);
+  --error: var(--berry-600);
+  --error-hover: var(--berry-700);
+  --error-dark: var(--berry-700); /* deprecated: use --error-hover (same value) */
+  --info: var(--sky-600);
+  --info-hover: var(--sky-700);
+
   /* ── COLOR ROLES — Background ── */
   --bg-page: #ffffff;
   --bg-card: var(--neutral-50);
   --bg-surface: var(--neutral-100);
   --bg-hover: var(--neutral-200);
+  --bg-active: var(--neutral-300);
   --bg-dark: var(--neutral-900);
   --bg-overlay: var(--neutral-950);
 
@@ -224,9 +233,16 @@
   --text-disabled: var(--neutral-400);
 
   /* ── COLOR ROLES — Interactive ── */
+  /* Interaction states: -hover = one step deeper on the source scale,
+     -active (pressed) = two steps. Components should bind these instead of
+     reaching into the palette. */
   --interactive-primary: var(--primary-500);
+  --interactive-primary-hover: var(--primary-600);
+  --interactive-primary-active: var(--primary-700);
   --interactive-accent: var(--primary-400);
+  --interactive-accent-hover: var(--primary-500);
   --interactive-tint: var(--primary-50);
+  --interactive-tint-hover: var(--primary-100);
   --focus-ring: var(--sky-400);
 
   /* ── SPACING (4px base) ── */
