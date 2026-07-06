@@ -254,6 +254,81 @@
   --stagger: 50ms;
 }
 
+/* ════════════════════════════════════════════════════════════════════════════
+   TYPOGRAPHY UTILITY CLASSES
+   ────────────────────────────────────────────────────────────────────────────
+   Convenience layer over the composite --type-* tokens. Apply a single class
+   instead of writing five declarations. The tokens above remain the source of
+   truth; these classes just reference them.
+
+   Usage:  <h1 class="text-h1">…</h1>   <p class="text-body">…</p>
+   ════════════════════════════════════════════════════════════════════════════ */
+
+.text-display {
+  font-family: var(--type-display-family);
+  font-size: var(--type-display-size);
+  font-weight: var(--type-display-weight);
+  line-height: var(--type-display-line-height);
+  letter-spacing: var(--type-display-tracking);
+}
+.text-h1 {
+  font-family: var(--type-h1-family);
+  font-size: var(--type-h1-size);
+  font-weight: var(--type-h1-weight);
+  line-height: var(--type-h1-line-height);
+  letter-spacing: var(--type-h1-tracking);
+}
+.text-h2 {
+  font-family: var(--type-h2-family);
+  font-size: var(--type-h2-size);
+  font-weight: var(--type-h2-weight);
+  line-height: var(--type-h2-line-height);
+  letter-spacing: var(--type-h2-tracking);
+}
+.text-h3 {
+  font-family: var(--type-h3-family);
+  font-size: var(--type-h3-size);
+  font-weight: var(--type-h3-weight);
+  line-height: var(--type-h3-line-height);
+  letter-spacing: var(--type-h3-tracking);
+}
+.text-h4 {
+  font-family: var(--type-h4-family);
+  font-size: var(--type-h4-size);
+  font-weight: var(--type-h4-weight);
+  line-height: var(--type-h4-line-height);
+  letter-spacing: var(--type-h4-tracking);
+}
+.text-body {
+  font-family: var(--type-body-family);
+  font-size: var(--type-body-size);
+  font-weight: var(--type-body-weight);
+  line-height: var(--type-body-line-height);
+  letter-spacing: var(--type-body-tracking);
+}
+.text-body-small {
+  font-family: var(--type-body-small-family);
+  font-size: var(--type-body-small-size);
+  font-weight: var(--type-body-small-weight);
+  line-height: var(--type-body-small-line-height);
+  letter-spacing: var(--type-body-small-tracking);
+}
+.text-caption {
+  font-family: var(--type-caption-family);
+  font-size: var(--type-caption-size);
+  font-weight: var(--type-caption-weight);
+  line-height: var(--type-caption-line-height);
+  letter-spacing: var(--type-caption-tracking);
+}
+.text-overline {
+  font-family: var(--type-overline-family);
+  font-size: var(--type-overline-size);
+  font-weight: var(--type-overline-weight);
+  line-height: var(--type-overline-line-height);
+  letter-spacing: var(--type-overline-tracking);
+  text-transform: uppercase;
+}
+
 /*
  * Font families — consumers must load Space Grotesk and DM Sans and set
  * --font-space-grotesk / --font-dm-sans (e.g. via next/font on <body>).
