@@ -11,6 +11,14 @@
  */
 
 :root {
+  /* ── TYPOGRAPHY — Font family NAMES (literal, for tooling) ──
+   * These expose the actual font family names as strings so external tools
+   * (e.g. the Figma token plugin) can read them directly, rather than
+   * resolving the next/font --font-* indirection. Keep in sync with the
+   * fonts loaded in --font-display / --font-body below. */
+  --font-display-name: "Space Grotesk";
+  --font-body-name: "DM Sans";
+
   /* ── TYPOGRAPHY (sizes only — font families on body) ── */
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
