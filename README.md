@@ -2,7 +2,7 @@
 
 Where every component knows its neighbors. A design system with warmth, motion, and personality baked into every token.
 
-18 components. 6 token categories. Built with React and CSS custom properties.
+19 components. 6 token categories. Built with React and CSS custom properties.
 
 ## Install
 
@@ -60,16 +60,17 @@ function Settings() {
 ### Atomic (11)
 Avatar, Badge, Button, Checkbox, Divider, Input, SegmentedControl, Select, Tabs, Toggle, Tooltip
 
-### Compositional (7)
+### Compositional (8)
 Banner, ContentSection, DataTable, EmptyState, FormSection, Menu, PropertyRow, SettingRow
 
 ## Tokens
 
 All components use CSS custom properties from `tokens.css`:
 
-- **Typography:** `--font-display`, `--font-body`, `--text-xs` through `--text-display`
-- **Colors:** `--neutral-50` through `--neutral-950`, `--primary-*`, `--berry-*`, `--terracotta-*`, `--amber-*`, `--sky-*`, `--plum-*`, `--sage-*`
-- **Semantic:** `--success`, `--warning`, `--error`, `--info`
+- **Typography — composite styles:** `--type-{display,h1,h2,h3,h4,body,body-small,caption,overline}-{family,size,weight,line-height,tracking}` — every dimension of every named style is a token. Utility classes (`.text-display` … `.text-overline`) layer on top. Raw sizes (`--text-xs` through `--text-display`) remain for utility use, and literal font-name tokens (`--font-display-name`, `--font-body-name`) expose family names to tooling.
+- **Colors — palette:** `--neutral-50` through `--neutral-950`, `--primary-*`, `--berry-*`, `--terracotta-*`, `--amber-*`, `--sky-*`, `--plum-*`, `--sage-*`
+- **Colors — roles:** `--bg-*`, `--border-*`, `--text-*`, `--interactive-*`, `--focus-ring` — aliases into the palette, with interaction states (`-hover` = one scale step deeper, `-active` = two)
+- **Colors — semantic:** `--success`, `--warning`, `--error`, `--info` (each with a `-hover` state) — aliased into the palette so the reference graph is total. `--error-dark` is deprecated in favor of `--error-hover`.
 - **Spacing:** `--space-1` through `--space-16` (4px base)
 - **Radius:** `--radius-control`, `--radius-surface`, `--radius-pill`
 - **Shadows:** `--shadow-subtle`, `--shadow-raised`, `--shadow-overlay`
